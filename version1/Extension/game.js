@@ -10,6 +10,7 @@ const screenh = 300;
 
 var speed = 5;
 var gravity = 1;
+var gravIFrame = 0;
 
 const gridSize = 25;
 
@@ -61,8 +62,8 @@ function handleAndDrawObstacles() {
       ctx.strokeRect(drawX, obs.y, obs.width, obs.height);
     } else if (obs.type === 'cGrav') {
       ctx.fillStyle = 'green';
-      ctx.fillRect(drawX, obs.y, obs.width, obs.height);
-      ctx.strokeRect(drawX, obs.y, obs.width, obs.height);
+      ctx.fillRect(drawX, obs.y, obs.width, obs.height+2);
+      ctx.strokeRect(drawX, obs.y, obs.width, obs.height+2);
     } else {
       // Draw 1:1 right-angle triangles using paths
       ctx.beginPath();
@@ -103,7 +104,12 @@ function handleAndDrawObstacles() {
       } else if (obs.type === 'end') {
         menu = true; // win condition
       } else if (obs.type === 'cGrav') {
-        gravity = gravity*-1; // change gravity
+	if (gravIFrame > 10){
+	  gravity = gravity*-1; // change gravity
+	  gravIFrame = 0;
+        } else {
+	  gravIFrame++;
+        }
       } else {
         // if inside cube, check if is also inside the triangle
         if (checkTriangleCollision(drawX, obs.y, obs.width, obs.type) && !noclip) {
@@ -283,7 +289,7 @@ function Draw(){
   if(menu){
     ctx.fillStyle = 'black';
     ctx.font = '16px sans-serif';
-    ctx.fillText('Wave Game', 170, 16);
+    ctx.fillText('Triganomitry Wave', 170, 16);
     ctx.fillText('Press enter to play', 145, 32);
     ctx.fillText('Press e to exit', 160, 48);
 
@@ -388,7 +394,7 @@ async function Reset(){
   }
   else if(selectedlevelnum == 7){
     selectedlevel = await loadLevelFromFile("level7.txt");
-    speed = 8;
+    speed = 5;
   }
 
   // use array to create obstacles 
