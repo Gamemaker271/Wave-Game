@@ -1,0 +1,84 @@
+// 1st triangle
+    spawnCube(gridSize * 15, gridSize * 12 - OBSTACLE_SIZE);
+    spawnCube(gridSize * 16, gridSize * 11 - OBSTACLE_SIZE);
+    spawnCube(gridSize * 17, gridSize * 10 - OBSTACLE_SIZE);
+    spawnCube(gridSize * 18, gridSize * 9 - OBSTACLE_SIZE);
+    spawnCube(gridSize * 19, gridSize * 10 - OBSTACLE_SIZE);
+    spawnCube(gridSize * 20, gridSize * 11 - OBSTACLE_SIZE);
+    spawnCube(gridSize * 21, gridSize * 12 - OBSTACLE_SIZE);
+
+    // uphill
+    spawnCube(gridSize * 4, gridSize * 1 - OBSTACLE_SIZE);
+    spawnCube(gridSize * 5, gridSize * 2 - OBSTACLE_SIZE);
+    spawnCube(gridSize * 6, gridSize * 3 - OBSTACLE_SIZE);
+    spawnCube(gridSize * 7, gridSize * 4 - OBSTACLE_SIZE);
+    spawnCube(gridSize * 8, gridSize * 5 - OBSTACLE_SIZE);
+    spawnCube(gridSize * 9, gridSize * 6 - OBSTACLE_SIZE);
+    spawnCube(gridSize * 10, gridSize * 7 - OBSTACLE_SIZE);
+    spawnCube(gridSize * 11, gridSize * 8 - OBSTACLE_SIZE);
+    spawnCube(gridSize * 12, gridSize * 9 - OBSTACLE_SIZE);
+    spawnCube(gridSize * 13, gridSize * 8 - OBSTACLE_SIZE);
+    spawnCube(gridSize * 14, gridSize * 7 - OBSTACLE_SIZE);
+    spawnCube(gridSize * 15, gridSize * 6 - OBSTACLE_SIZE);
+    spawnCube(gridSize * 16, gridSize * 5 - OBSTACLE_SIZE);
+    spawnCube(gridSize * 17, gridSize * 4 - OBSTACLE_SIZE);
+    spawnCube(gridSize * 18, gridSize * 3 - OBSTACLE_SIZE);
+    spawnCube(gridSize * 19, gridSize * 4 - OBSTACLE_SIZE);
+    spawnCube(gridSize * 20, gridSize * 5 - OBSTACLE_SIZE);
+    spawnCube(gridSize * 21, gridSize * 6 - OBSTACLE_SIZE);
+
+    // pairs
+    //up
+    spawnCube(gridSize * 22, gridSize * 5 - OBSTACLE_SIZE);
+    spawnCube(gridSize * 22, gridSize * 11 - OBSTACLE_SIZE);
+
+    spawnCube(gridSize * 23, gridSize * 5 - OBSTACLE_SIZE);
+    spawnCube(gridSize * 23, gridSize * 10 - OBSTACLE_SIZE);
+
+    spawnCube(gridSize * 24, gridSize * 5 - OBSTACLE_SIZE);
+    spawnCube(gridSize * 24, gridSize * 9 - OBSTACLE_SIZE);
+    //straight
+    spawnCube(gridSize * 25, gridSize * 5 - OBSTACLE_SIZE);
+    spawnCube(gridSize * 25, gridSize * 9 - OBSTACLE_SIZE);
+    spawnCube(gridSize * 26, gridSize * 5 - OBSTACLE_SIZE);
+    spawnCube(gridSize * 26, gridSize * 9 - OBSTACLE_SIZE);
+    spawnCube(gridSize * 27, gridSize * 5 - OBSTACLE_SIZE);
+    spawnCube(gridSize * 27, gridSize * 9 - OBSTACLE_SIZE);
+    spawnCube(gridSize * 28, gridSize * 5 - OBSTACLE_SIZE);
+    spawnCube(gridSize * 28, gridSize * 9 - OBSTACLE_SIZE);
+    spawnCube(gridSize * 29, gridSize * 5 - OBSTACLE_SIZE);
+    spawnCube(gridSize * 29, gridSize * 9 - OBSTACLE_SIZE);
+    //down 2
+    spawnCube(gridSize * 30, gridSize * 5 - OBSTACLE_SIZE);
+    spawnCube(gridSize * 30, gridSize * 10 - OBSTACLE_SIZE);
+    spawnCube(gridSize * 31, gridSize * 6 - OBSTACLE_SIZE);
+    spawnCube(gridSize * 31, gridSize * 11 - OBSTACLE_SIZE);
+    spawnCube(gridSize * 32, gridSize * 7 - OBSTACLE_SIZE);
+    spawnCube(gridSize * 32, gridSize * 12 - OBSTACLE_SIZE);
+
+    // up
+    spawnCube(gridSize * 33, gridSize * 6 - OBSTACLE_SIZE);
+    spawnCube(gridSize * 33, gridSize * 11 - OBSTACLE_SIZE);
+    spawnCube(gridSize * 34, gridSize * 5 - OBSTACLE_SIZE);
+    spawnCube(gridSize * 34, gridSize * 10 - OBSTACLE_SIZE);
+    spawnCube(gridSize * 35, gridSize * 4 - OBSTACLE_SIZE);
+    spawnCube(gridSize * 35, gridSize * 9 - OBSTACLE_SIZE);
+    spawnCube(gridSize * 36, gridSize * 3 - OBSTACLE_SIZE);
+    spawnCube(gridSize * 36, gridSize * 8 - OBSTACLE_SIZE);
+
+//-- something
+var level1 = [
+  //1    2    3    4    5    6    7    8    9    10
+  ['_', '_', '_', '_', '_', '_', '_', '_', '_', '_'], // 1
+  ['_', '_', '_', '_', '_', '_', '_', '_', '_', '_'], // 2
+  ['_', '_', '_', '_', '_', '_', '_', '_', '_', '_'], // 3
+  ['_', '_', '_', '_', '_', '_', '_', '_', '_', '_'], // 4
+  ['_', '_', '_', '_', '_', '_', '_', '_', '_', '_'], // 5
+  ['_', '_', '_', '_', '_', '_', '_', '_', '_', '_'], // 6
+  ['_', '_', '_', '_', '_', '_', '_', '_', '_', '_'], // 7
+  ['_', '_', '_', '_', '_', '_', '_', '_', '_', '_'], // 8
+  ['_', '_', '_', '_', '_', '_', '_', '_', '_', '_'], // 9
+  ['_', '_', '_', '_', '_', '_', '#', '_', '_', '_'], // 10
+  ['_', '_', '_', '_', '_', '#', '_', '_', '_', '_'], // 11
+  ['_', '_', '_', '_', '#', '_', '_', '_', '_', '_'], // 12
+];
