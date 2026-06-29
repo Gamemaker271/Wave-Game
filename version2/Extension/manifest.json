@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "Wave Game",
-  "version": "1.0",
+  "name": "Trigonometry Run",
+  "version": "2.0",
   "description": "A game based on geometry dash.",
   "permissions": ["activeTab"],
   "content_scripts": [
