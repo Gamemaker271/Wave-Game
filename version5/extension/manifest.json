@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Trigonometry Run",
+  "version": "4.0",
+  "description": "A game based on geometry dash.",
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["game.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "game.html"
+  }
+}

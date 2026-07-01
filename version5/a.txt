@@ -1,0 +1,2 @@
+Version 3 of trigonometry run
+added ship gamemode
