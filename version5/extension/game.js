@@ -72,15 +72,15 @@ function handleAndDrawObstacles() {
       ctx.fillRect(drawX, obs.y, obs.width, (obs.height+50));
       ctx.strokeRect(drawX, obs.y, obs.width, (obs.height+50));
     } else if (obs.type === 'miniSize') {
-      ctx.fillStyle = 'pink';
+      ctx.fillStyle = 'deepPink';
       ctx.fillRect(drawX, obs.y, obs.width, (obs.height));
       ctx.strokeRect(drawX, obs.y, obs.width, (obs.height));
     } else if (obs.type === 'normalSize') {
-      ctx.fillStyle = 'purple';
+      ctx.fillStyle = 'lime';
       ctx.fillRect(drawX, obs.y, obs.width, (obs.height));
       ctx.strokeRect(drawX, obs.y, obs.width, (obs.height));
     } else if (obs.type === 'bigSize') {
-      ctx.fillStyle = 'lime';
+      ctx.fillStyle = 'lightSalmon';
       ctx.fillRect(drawX, obs.y, obs.width, (obs.height));
       ctx.strokeRect(drawX, obs.y, obs.width, (obs.height));
     } else {
