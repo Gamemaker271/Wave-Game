@@ -83,6 +83,14 @@ function handleAndDrawObstacles() {
       ctx.fillStyle = 'lightSalmon';
       ctx.fillRect(drawX, obs.y, obs.width, (obs.height));
       ctx.strokeRect(drawX, obs.y, obs.width, (obs.height));
+    } else if (obs.type === 'waveP') {
+      ctx.fillStyle = 'lightBlue';
+      ctx.fillRect(drawX, obs.y, obs.width, (obs.height));
+      ctx.strokeRect(drawX, obs.y, obs.width, (obs.height));
+    } else if (obs.type === 'shipP') {
+      ctx.fillStyle = 'lightPink';
+      ctx.fillRect(drawX, obs.y, obs.width, (obs.height));
+      ctx.strokeRect(drawX, obs.y, obs.width, (obs.height));
     } else {
       // Draw 1:1 right-angle triangles using paths
       ctx.beginPath();
@@ -150,6 +158,10 @@ function handleAndDrawObstacles() {
 	} else {
 	  gravity = 0.5;
 	}
+      } else if (obs.type === 'waveP') {
+	gamemode = "wave";
+      } else if (obs.type === 'shipP') {
+	gamemode = "ship";
       } else {
         // if inside cube, check if is also inside the triangle
         if (checkTriangleCollision(drawX, obs.y, obs.width, obs.type) && !noclip) {
@@ -498,6 +510,10 @@ async function Reset(){
         spawnObstacle(c * gridSize, r * gridSize, 'normalSize'); // end trigger
       } else if (selectedlevel[r][c] === 'b') { 
         spawnObstacle(c * gridSize, r * gridSize, 'bigSize'); // end trigger
+      } else if (selectedlevel[r][c] === 'w') { 
+        spawnObstacle(c * gridSize, r * gridSize, 'waveP'); // end trigger
+      } else if (selectedlevel[r][c] === 's') { 
+        spawnObstacle(c * gridSize, r * gridSize, 'shipP'); // end trigger
       } else if (selectedlevel[r][c] === 'L') { 
         spawnObstacle(c * gridSize, r * gridSize, 'tr_bl'); // Bottom-Left
       } else if (selectedlevel[r][c] === 'J') { 
