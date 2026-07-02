@@ -66,31 +66,31 @@ function handleAndDrawObstacles() {
     } else if (obs.type === 'uGrav') {
       ctx.fillStyle = 'gold';
       ctx.fillRect(drawX, obs.y, obs.width, (obs.height));
-      ctx.strokeRect(drawX, obs.y, obs.width, (obs.height));
+      //ctx.strokeRect(drawX, obs.y, obs.width, (obs.height));
     } else if (obs.type === 'dGrav') {
       ctx.fillStyle = 'blue';
       ctx.fillRect(drawX, obs.y, obs.width, (obs.height+50));
-      ctx.strokeRect(drawX, obs.y, obs.width, (obs.height+50));
+      //ctx.strokeRect(drawX, obs.y, obs.width, (obs.height+50));
     } else if (obs.type === 'miniSize') {
       ctx.fillStyle = 'deepPink';
       ctx.fillRect(drawX, obs.y, obs.width, (obs.height));
-      ctx.strokeRect(drawX, obs.y, obs.width, (obs.height));
+      //ctx.strokeRect(drawX, obs.y, obs.width, (obs.height));
     } else if (obs.type === 'normalSize') {
       ctx.fillStyle = 'lime';
       ctx.fillRect(drawX, obs.y, obs.width, (obs.height));
-      ctx.strokeRect(drawX, obs.y, obs.width, (obs.height));
+      //ctx.strokeRect(drawX, obs.y, obs.width, (obs.height));
     } else if (obs.type === 'bigSize') {
       ctx.fillStyle = 'lightSalmon';
       ctx.fillRect(drawX, obs.y, obs.width, (obs.height));
-      ctx.strokeRect(drawX, obs.y, obs.width, (obs.height));
+      //ctx.strokeRect(drawX, obs.y, obs.width, (obs.height));
     } else if (obs.type === 'waveP') {
       ctx.fillStyle = 'lightBlue';
       ctx.fillRect(drawX, obs.y, obs.width, (obs.height));
-      ctx.strokeRect(drawX, obs.y, obs.width, (obs.height));
+      //ctx.strokeRect(drawX, obs.y, obs.width, (obs.height));
     } else if (obs.type === 'shipP') {
       ctx.fillStyle = 'lightPink';
       ctx.fillRect(drawX, obs.y, obs.width, (obs.height));
-      ctx.strokeRect(drawX, obs.y, obs.width, (obs.height));
+      //ctx.strokeRect(drawX, obs.y, obs.width, (obs.height));
     } else {
       // Draw 1:1 right-angle triangles using paths
       ctx.beginPath();
@@ -229,12 +229,25 @@ async function loadLevelFromFile(filePath) {
 /*----- Input -----*/
 var spacekey = false;
 var lastspacekey = false;
-
+addEventListener('mousedown', ()=>{click(true);});
+addEventListener('mouseup', ()=>{click(false);});
+function click(down) {
+lastspacekey = spacekey;
+  lastmenu = menu;
+spacekey = down;
+if (down){    
+	
+    if(menu && lastmenu){
+      menu = false;
+      Reset();
+    }
+}
+}
 function handleKeyDown(event){
   lastspacekey = spacekey;
   lastmenu = menu;
   // controls
-  if (event.key === ' ' || event.key === 'ArrowUp' || event.key === 'w' || event.key === 'mouseDown') {
+  if (event.key === ' ' || event.key === 'ArrowUp' || event.key === 'w' || event.key === 'f' || event.key === 'j') {
     spacekey = true;
     if(menu && lastmenu){
       menu = false;
@@ -282,7 +295,7 @@ function handleKeyDown(event){
 }
 function handleKeyUp(event){
   // controls
-  if (event.key === ' ' || event.key === 'ArrowUp' || event.key === 'w') {
+  if (event.key === ' ' || event.key === 'ArrowUp' || event.key === 'w' || event.key === 'f' || event.key === 'j') {
     spacekey = false;
   }
   if (event.key === 'n') {
